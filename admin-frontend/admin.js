@@ -53,9 +53,7 @@ function filterOrders() {
             order.name.toLowerCase().includes(searchQuery) ||
             order.email.toLowerCase().includes(searchQuery) ||
             order.phone.includes(searchQuery) ||
-            order.code.toString().includes(searchQuery)
-
-        );
+            String(order.code).toLowerCase().includes(searchQuery))
     }
 
     // Sort orders based on the closest arrivalTime to the current time
